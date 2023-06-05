@@ -22,7 +22,7 @@ body {
 }
 
 .navbar-toggler {
-  background-color: yellow;
+  background-color: grey;
 }
 
 .carrusel-item img {
@@ -110,47 +110,14 @@ footer .container-redes .redes {
   width: 40px;
 }
 
-/*  margin-top: $espacio-chico;
-flex-direction: column;
-align-items: center;
-margin-bottom: $espacio-grande;*/
-/*ANIDACION
-                    .padre-redes, .redes {
-                       /*@include flex-column-centrado;
-                       display: flex;/*el flex los pone en linea
-
-                    align-items: center;
-
-                      width: 35px;  
-                      margin-left: 30px;
-
-                    }
-                    }
-
-
-                    /*.redes{
-
-                        width: 35px;
-                        }
-   /*                 padre-redes{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}}
-
-
-@media (min-width:768px) {
-
-    .padre-redes{
+@media (min-width: 768px) {
+  .padre-redes {
     flex-direction: column;
-        position: fixed;
-        top: 40%;
-        right: 2%;
-            }
-  .titulo-redes{
-    display: none;
+    position: fixed;
+    top: 40%;
+    right: 2%;
   }
-}*/
+}
 /*index aclarar a que me refiero */
 * {
   margin: 0;
@@ -203,7 +170,6 @@ a:visited {
   color: greenyellow;
 }
 
-/*----------*/
 .banner {
   background-image: url(../img/la-casa.jpg);
   background-size: cover;
@@ -223,6 +189,7 @@ a:visited {
   /*    flex-direction: column;
       align-items: center;
       align-content: center;*/
+  grid-template-columns: repeat(2, 1fr);
   /*   @include flex-column-centrado;*/
   gap: 20px;
 }
@@ -240,7 +207,6 @@ a:visited {
   .padre-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /*grid-template-columns: repeat(2, 1fr);*/
     justify-items: center;
     gap: 30px;
   }
@@ -269,10 +235,6 @@ a:visited {
   font-weight: 700;
 }
 
-/*.photo{ 
-    display: block;
-    margin: 0 auto;
-}*/
 .photo {
   width: 900px;
   height: 600px;
@@ -281,9 +243,6 @@ a:visited {
   padding-top: 20px;
 }
 
-/*    .banner h1{
-        background-color:rgba(rgb(198, 20, 20), rgb(21, 253, 21), rgb(64, 64, 65), 0.2);
-    }*/
 .botones, .boton {
   margin-left: 120px;
   margin-top: 30px;
@@ -421,24 +380,6 @@ de la pagina principal*/
 
 .fade:hover {
   opacity: 0;
-}
-
-/* CUSTOM RADIO BUTTON 
-.filtro-productos{*/
-.radio::after {
-  content: "";
-  height: 18px;
-  width: 18px;
-  border-radius: 100%;
-  background-color: #fff;
-  transform: scale(0);
-  transition: all 200ms ease;
-}
-
-/*}*/
-.radio:checked + .radio-label {
-  color: #fff;
-  background-color: #75c042;
 }
 
 .main-contacto {

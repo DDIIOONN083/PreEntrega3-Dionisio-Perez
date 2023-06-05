@@ -17,8 +17,9 @@ overflow-x: hidden;
     color: $color-terciario;
 }
 }
+
 .navbar-toggler {
-    background-color:  $color-terciario;
+    background-color: $color-secundario;
 }
 
 
@@ -122,39 +123,7 @@ overflow-x: hidden;
             }
         }
 
-
-
-                      /*  margin-top: $espacio-chico;
-                      flex-direction: column;
-                      align-items: center;
-                      margin-bottom: $espacio-grande;*/
-                        
-                    /*ANIDACION
-                    .padre-redes, .redes {
-                       /*@include flex-column-centrado;
-                       display: flex;/*el flex los pone en linea
-                     
-                    align-items: center;
-                      
-                      width: 35px;  
-                      margin-left: 30px;
-            
-                    }
-                    }
-
-
-                    /*.redes{
-                        
-                        width: 35px;
-                        }
-   /*                 padre-redes{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}}
-
-
-@media (min-width:768px) {
+@media (min-width:$tablet) {
 
     .padre-redes{
     flex-direction: column;
@@ -162,8 +131,5 @@ overflow-x: hidden;
         top: 40%;
         right: 2%;
             }
-  .titulo-redes{
-    display: none;
-  }
-}*/
+ }
 
