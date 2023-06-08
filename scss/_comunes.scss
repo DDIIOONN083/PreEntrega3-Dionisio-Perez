@@ -3,12 +3,45 @@ html, body, .container-fluid {
     height: 100%;
   }
 
-body {
+  body {
     font-family: $fuente-principal;
 background-color:  $color-primario;
 color: $color-secundario; 
 overflow-x: hidden;
 }
+
+
+@media (min-width:$tablet){
+body{
+    background-color:  $color-cuaternario;
+         }
+        }
+
+
+
+
+
+header{
+    display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #81B214;
+gap: 18px;
+padding: 20px 0;
+position: sticky;
+top: 0;
+} 
+
+
+
+@media (min-width:768px){
+    header{
+     flex-direction: row;
+     justify-content: space-around;  /*-- QUE ERA? --*/
+         }
+        }
+
+
 
 
 .nav-link, .nav-link.active, .navbar-nav .nav-link.active {
@@ -21,6 +54,7 @@ overflow-x: hidden;
 .navbar-toggler {
     background-color: $color-secundario;
 }
+
 
 
 
@@ -92,23 +126,12 @@ overflow-x: hidden;
             text-align: center;   
             margin-top: $fuente-media;
         }
-
-
-
-        
-        
-
-
-      
-
-      
-                    
-
+            
                    
         
         footer{
+            background-color: $color-primario;
           @include  flex-column-centrado;
-             margin-left: 20px;
             margin-top: $espacio-grande;
 
                     /*ANIDACION*/
@@ -116,16 +139,18 @@ overflow-x: hidden;
                 color: $color-terciario;
                 text-decoration: none;
                 font-size: 40px;
+                margin-left: 100px;
 
-                .redes{
+                .redes{           
                     width: 40px;
+                  
                 }
             }
         }
 
 @media (min-width:$tablet) {
-
     .padre-redes{
+       
     flex-direction: column;
         position: fixed;
         top: 40%;
