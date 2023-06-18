@@ -1,19 +1,32 @@
-.presentacion{
-    
+
+
+ 
+  .presentacion{    
+    border-radius: 50%;
+        max-width: 25%;
+        margin-right:  20px;
+       margin-bottom: 50px;
+       box-shadow: -35px 52px 96px -12px rgb(255, 197, 8);
+  } 
+
+
+@media (min-width: 768px) {
+  /*.padre-cards*/
+  .presentacion{
     @include centrar-imagen;
     @include header-img;
-    
+  } 
 }
 
-.container-fluid  {
-    @extend p;
-margin: 20px ;
-    }
 
-   /* .container-fluid, .container, .p{
-        margin-left: 100px;
-
-    }*/
+/*++++++*/
+  .container-fluid  {
+  @extend p;
+  margin: 20px ;
+  .navbar-toggler{
+    margin-bottom: 10px;
+ }
+      }
 
 
      /*Mobile*/
@@ -112,10 +125,13 @@ margin: 20px ;
     align-items: center;
     gap: 20px;
     margin-top: 40px;
+    p{ 
+     padding-right: 20px;
     }
   
-  /* en vez de ver uno al lado del otro 
-  se van a ver 2 y 2 - en 2 columnas*/
+    }
+
+
     @media (min-width: 768px) {
       .padre-banners2{
         display: grid;
@@ -125,9 +141,8 @@ margin: 20px ;
     }
   
     
-  /*A partir de pantallas mas grandes se vean las 4 una a lado de la otra*/
+ 
     @media (min-width: 992px) {
-   
         .padre-banners2{
         display: grid;
         grid-template-columns: repeat(2,2fr);
@@ -143,9 +158,7 @@ margin: 20px ;
         margin-left: 20px;
       }
 
-      
-
-    
+        
       footer{
         @include  flex-column-centrado;
            margin-left: 20px;

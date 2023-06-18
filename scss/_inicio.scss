@@ -17,34 +17,31 @@ main{
     border-radius: 10px;
     border-color: #FFF80A;
     box-shadow: -35px 52px 96px -12px rgba(255,255,255,0.75);
-   /* background-color: #fffb003f;*/
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: $espacio-chico;
-    }
+    
+   }
     
     @media(min-width: $tablet){
         .container-fluid{
             flex-direction: row;
-            gap: $espacio-medio;       
+            gap: $espacio-medio; 
+            margin-top: $espacio-chico; 
+            p {padding-right: 20px;
+            }     
             }
+          
             h2, h3 {
             @include flex-row-centrado;
                 text-align: center;
-                
+                justify-content: center;
                 margin-top: $espacio-chico;
                 color: #206A5D;
                 font-weight: 400px;
             }
+          
         }   
-
-
-        .menu-nav li a{
-            color: bisque;
-            font-weight: 500px;
-        }
 
         a{
             color: black;
@@ -53,7 +50,13 @@ main{
             &:visited{color: greenyellow;}
         }
                 
-
+/*Fotos Tamaño*/
+.logo{
+    
+    @include medidas(100px,100px);
+    @include centrar-imagen;
+    @include borde-iluminacion-imagen;
+}
 
         
         .banner{
@@ -69,14 +72,8 @@ main{
     /*PADRE-CARDS*/     
    
     .padre-cards{
-        background-color:#FFF80A ;       
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        grid-template-columns: repeat(2, 1fr);   
-        /*@include flex-column-centrado;*/
-         gap: 20px;
+        grid-template-columns: repeat(2,1fr);   
+         gap: 5px;
 
          .card-imagen{
         @include medidas(100%,100%);
@@ -87,13 +84,15 @@ main{
 
 
     @media (min-width:$tablet) {
-        .padre-cards{
+        .padre-cards{  
         display: grid;
-        grid-template-columns: repeat(4, 1fr);   
-    justify-items: center;
-    gap: 30px;
+        grid-template-columns: repeat(3, 1fr);   
+    padding-top: 20px;
+        justify-items: center;
+    gap: 20px;
     }  
 }
+
 
 /*reducir car a .card-imagen*/
 .card{
@@ -102,8 +101,7 @@ main{
     border-radius: 10px;
     border-color: #FFF80A;
     box-shadow: -35px 52px 96px -12px rgba(255,255,255,0.75);
-   /* @include borde-iluminacion-imagen;
-    @include flex-column-centrado;    */
+  
     padding: 10px;
     margin-bottom: 10px;
     display: flex;
@@ -111,7 +109,12 @@ main{
     justify-content: center;
     gap: 8px;
     
-
+    .card-title {
+        color: #206A5D;
+        font-weight: 500px;
+        font-size: $fuente-media;
+   
+    }
 
     h4, p{
         color: #D61C4E;
@@ -126,22 +129,31 @@ main{
         font-weight: 700;        
     }
 }
-    
-      
+ 
+
+
     .photo{
-    @include medidas(900px,600px);
+    @include medidas(450px,300px);
     @include centrar-imagen;
     padding-top: 20px;
 }
 
+@media (min-width: 768px) {
+    .photo{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+} 
+}
 
-    .botones{
-        margin-left: 120px;   
-        margin-top: 30px;        
+
+.botones{
+        margin-left: 10px;   
+        margin-top: 40px;        
         padding: 5px 10px;
         border-radius: 20px;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
         flex-wrap:wrap          
     }
 
@@ -157,6 +169,16 @@ main{
 .otra-lista li:nth-child(odd){
     background-color: orange;
 }
+   
+@media (min-width:$tablet) {
+    .botones{  
+        margin-left: 120px;   
+}  
+}
+
+
+
+
 
 .container-labels{
     display: flex;
@@ -230,65 +252,18 @@ main{
         text-align: center;
     }
 
-    
+.color-main{
+    h2 {
+        @include  flex-column-centrado;
+        padding: 10px;
+        text-align: center; 
+        font-size: 20px;
+        color: #206A5D;
+        font-weight: 500px;
+    }
 
-
-/*Fotos Tamaño*/
-.logo{
-    @include medidas(100px,100px);
-    @include centrar-imagen;
-    @include borde-iluminacion-imagen;
 }
 
-
-/*ANIMACION-BARRA DE CARGA*/
-.section-barra{
-    background-color:$color-cuaternario;
-    display: flex;
-    justify-content: center;
-    
-    .barra-progreso{
-        margin-top: 30px;
-        width: 60%;
-        border: solid 1px;
-        height: 15px;
-        }
-
-    .barra-rellena{
-        border:  solid 1px;
-        height: 13px;
-        width: 100%;
-        background-color: greenyellow;
-        animation: rellenando 5s;       
-    }
-
-    @keyframes rellenando {
-        0% {
-            width: 0%;
-                }
-                100%{
-                    width: 100%;
-                    opacity: 0.0;
-                }
-                
-    }
-
-    .fade, .barra-rellena {
-         
-        opacity: 0.8;
-        -webkit-transition: opacity 0.3s;
-       transition: opacity 0.5s;
-    }
-    
-    .fade:hover {
-        opacity:0; 
-    }
-
-    }
-    
-   
-
-   
 
 
 

@@ -1,6 +1,12 @@
 /*Estilos comunes para todas las secciones*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html, body, .container-fluid {
     height: 100%;
+    width: 100%;
   }
 
   body {
@@ -13,12 +19,9 @@ overflow-x: hidden;
 
 @media (min-width:$tablet){
 body{
-    background-color:  $color-cuaternario;
+    background-color: $color-primario;
          }
         }
-
-
-
 
 
 header{
@@ -30,19 +33,22 @@ gap: 18px;
 padding: 20px 0;
 position: sticky;
 top: 0;
-} 
 
+.img{
+    margin-block-start: auto;
+}
+} 
 
 
 @media (min-width:768px){
     header{
      flex-direction: row;
-     justify-content: space-around;  /*-- QUE ERA? --*/
+     justify-content: space-around;  
          }
         }
 
 
-
+/*Menu.*/
 
 .nav-link, .nav-link.active, .navbar-nav .nav-link.active {
     color: $color-secundario;
@@ -53,6 +59,7 @@ top: 0;
 
 .navbar-toggler {
     background-color: $color-secundario;
+   
 }
 
 
@@ -84,18 +91,6 @@ top: 0;
             animation-name: aparecer;
             animation-iteration-count: infinite;
         }
-
-        @keyframes aparecer{
-            0%{
-                opacity: 0;
-            }
-
-            100%{
-                opacity: 1;
-
-            }
-        }
-        
 /*todos los titles de los footers son h3*/
         h2,h3 {
             @include  flex-column-centrado;
@@ -121,40 +116,55 @@ top: 0;
             font-weight: 600px;
         }
 
+         h7{
+            @include  flex-column-centrado;
+            padding: 10px;
+            text-align: center; 
+            font-size: 25px;
+            color: #206A5D;
+            font-weight: 500px;
+        }
+
+
         p{
             font-size: $fuente-media;
             text-align: center;   
             margin-top: $fuente-media;
-        }
-            
+        }            
                    
         
-        footer{
+        footer{ 
             background-color: $color-primario;
           @include  flex-column-centrado;
             margin-top: $espacio-grande;
+            margin-right: 20px;
 
+            
                     /*ANIDACION*/
-            .container-redes  {
+            .container-redes  {  
                 color: $color-terciario;
                 text-decoration: none;
                 font-size: 40px;
                 margin-left: 100px;
 
                 .redes{           
-                    width: 40px;
-                  
+                    width: 40px;                  
                 }
             }
         }
+      
 
 @media (min-width:$tablet) {
-    .padre-redes{
-       
-    flex-direction: column;
+    .container{
+    position: relative;
+    width: 100vw;
+    
+      .padre-redes{
+        flex-direction: column;
         position: fixed;
         top: 40%;
         right: 2%;
-            }
- }
+            }}}
+ 
+
 
